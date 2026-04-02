@@ -105,10 +105,13 @@ TIME_ZONE = 'Asia/Tashkent'
 USE_I18N = True
 USE_TZ = True
 
+USE_X_FORWARDED_HOST = True
+FORCE_SCRIPT_NAME = ''
+
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = Path('/app/media')
 
 os.makedirs(MEDIA_ROOT, exist_ok=True)
 
@@ -167,3 +170,4 @@ SPECTACULAR_SETTINGS = {
         {'name': 'Notifications', 'description': 'Bildirishnomalar'},
     ],
 }
+

@@ -26,7 +26,6 @@ class UserPublicSerializer(serializers.ModelSerializer):
             return request.build_absolute_uri(obj.profile_image.url)
         return None
 
-
 class UserMeSerializer(UserPublicSerializer):
     """O'z profili uchun — email, phone ham ko'rinadi."""
     class Meta(UserPublicSerializer.Meta):

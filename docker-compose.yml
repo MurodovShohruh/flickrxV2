@@ -39,7 +39,7 @@ services:
     env_file:
       - ./backend/.env
     volumes:
-      - media_files:/app/media
+      - ./backend/media:/app/media
     ports:
       - "8000:8000"
     depends_on:
@@ -58,7 +58,7 @@ services:
     env_file:
       - ./backend/.env
     volumes:
-      - media_files:/app/media
+      - ./backend/media:/app/media
     depends_on:
       - redis
       - db
@@ -71,6 +71,8 @@ services:
     restart: unless-stopped
     ports:
       - "3000:80"
+    volumes:
+      - ./backend/media:/app/media
     depends_on:
       - backend
 
