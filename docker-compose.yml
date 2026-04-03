@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: flickrx
       POSTGRES_PASSWORD: flickrx123
-      POSTGRES_DB: flickrx_db
+      POSTGRES_DB: flickrx
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
