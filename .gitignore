@@ -9,7 +9,6 @@ __pycache__/
 # Virtual environment
 venv/
 env/
-.env
 .venv/
 
 # Django
@@ -39,4 +38,6 @@ media/
 Thumbs.db
 
 # Docker
-.dock
+.dockerignore
+docker-compose.override.yml
+.docker/
